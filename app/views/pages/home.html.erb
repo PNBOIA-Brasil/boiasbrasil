@@ -1,2 +1,242 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<%= render 'shared/navbar' %>
+
+<div class="front-page" style="background-image: linear-gradient(to left, rgba(0,0,0,0), rgba(0,0,0,0)), url('<%= image_path 'banner.jpg' %>')" id="home">
+  <div class="container banner">
+    <hr class='cont-white'>
+    <hr class='pont-white'>
+    <div class="row mt-3 pt-3 mb-2 pb-2">
+      <div class="col-sm-12 col-md-12 col-lg-12 text-center ">
+        <div class="front-page-content1 pb-5">
+          <h1>1° BOIAS-BRASIL</h1>
+          <p class='mt-1'>ENCONTRO CIENTÍFICO DO PROGRAMA NACIONAL DE BOIAS</p>
+          <p class='date-p mt-1'>23 a 25 de novembro de 2022 - Niterói-RJ</p>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-12 col-lg-12 text-center justify-content-between">
+        <div class="row">
+          <div class="col-sm-6 col-md-6 col-lg-6 text-center ">
+            <%= link_to "INSCREVA-SE", new_subscription_path, class:"white-button" %>
+          </div>
+          <div class="col-sm-6 col-md-6 col-lg-6 text-center ">
+            <a href="#about">
+              <div class="blue-button">
+                SAIBA MAIS
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr class='pont-white mt-1'>
+    <hr class='cont-white'>
+  </div>
+</div>
+
+<div class="info-cards" id='about'>
+  <div class="info-cont container">
+    <div class="card-category">
+      <h2 id="counter1">27</h2>
+      <h4 class="px-2">Boias lançadas</h4>
+    </div>
+    <div class="card-category">
+      <h2 id="counter2">97</h2>
+      <h4 class="px-2">Trabalhos publicados</h4>
+    </div>
+    <div class="card-category">
+      <h2 id="counter3"><%= 15142 %></h2>
+      <h4 class="px-2">Dias de dados</h4>
+    </div>
+  </div>
+</div>
+<div class="container text-justify pt-3 pb-3">
+  <%= image_tag "logo_bb.png",class: 'align-middle pr-3 title-img text-center text-align-center' %>
+  <h1 class='text-center title text-align-center pt-2 pb-1'>1° BOIAS-BRASIL</h1>
+  <div class="align-items-center">
+    <div class="text-center">
+      <p class='sobre pt-1 pb-1'>Para comemorar seus 22 anos de coleta de dados, a equipe do Programa Nacional de Boias (PNBOIA)
+        convida a todos a participarem do 1° BOIAS-BRASIL (1BB), que representa o primeiro encontro científico
+        do PNBOIA.</p>
+      <p class='sobre pt-1'>O objetivo do evento é estimular interações entre cientistas e profissionais que atuem no
+        monitoramento e modelagem costeira ao longo da costa brasileira, com ênfase na utilização de
+        dados oriundos do PNBOIA.</p>
+      <p class='sobre pt-1'>O evento ocorrerá entre os dias 23 a 25 de novembro, na Diretoria de Hidrografia
+        e Navegação (DHN), na cidade de Niterói-RJ. Será um encontro híbrido, com possibilidade de
+        participação presencial ou por modalidade remota.</p>
+      <p class='sobre pt-1'>No primeiro, serão apresentados a estrutura do PNBOIA, como
+        funciona a sua coleta de dados e os principais sensores utilizados. No segundo e terceiro dias,
+        pesquisadores e demais profissionais usuários dos dados do PNBOIA apresentarão suas pesquisas e
+        os principais resultados obtidos.</p>
+      <p class='sobre pt-1'><strong>Venha participar dessa primeira edição!</strong></p>
+    </div>
+  </div>
+</div>
+<div class='container'>
+  <div class='bg-white pt-2 pb-2'>
+    <h2 class='text-center text-align-center'>REALIZAÇÃO</h2>
+    <div class='row justify-content-center'>
+      <div class="col-sm-3 col-md-3 col-lg-3 text-center align-items-center">
+        <div class="icon-image mx-auto">
+          <%= image_tag("logo_marinha.png") %>
+        </div>
+      </div>
+      <div class="col-sm-3 col-md-3 col-lg-3 text-center align-items-center">
+        <div class="icon-image mx-auto">
+          <%= image_tag("logo_chm.png") %>
+        </div>
+      </div>
+      <div class="col-sm-3 col-md-3 col-lg-3 text-center align-items-center">
+        <div class="icon-image mx-auto">
+          <%= image_tag("logo_pnboia.png") %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class='bg-white mt-4 mb-4 pt-2 pb-2'>
+    <h2 class='text-center text-align-center'>PATROCINADORES</h2>
+    <div class='row justify-content-center'>
+      <div class="col-sm-3 col-md-3 col-lg-3 text-center align-items-center">
+        <div class="icon-image mx-auto ">
+          <%= image_tag("logo_nortek.png") %>
+        </div>
+      </div>    
+    </div>
+  </div>
+</div>
+
+<div class="image-strip text-center" id="fundo">
+  <div class="container reveal">
+    <div class="line"></div>
+  </div>
+</div>
+
+<div class="container text-justify pb-4 pt-2" id="pnboia">
+  <h1 class='text-center title text-align-center pt-2 pb-2'>PNBOIA</h1>
+  <div class="row align-items-center">
+    <div class="col-sm-12 col-md-6 col-lg-6 mt-2 align-items-center">
+      <h6>O Programa Nacional de Boias (PNBOIA), criado em 1997 e gerenciado pelo Centro de Hidrografia
+      da Marinha (CHM), tem por objetivo disponibilizar à sociedade, comunidade científica e ao Serviço
+      Meteorológico Marinho (SMM) da Marinha do Brasil dados meteorológicos e oceanográficos, obtidos
+      nas áreas oceânicas de interesse do Brasil em tempo quase-real. Tais dados, essenciais para a
+      melhoria da previsão meteorológica marinha e climatológica sobre a região do Oceano Atlântico Sul
+      e Tropical, são provenientes de uma rede de boias meteoceanográficas fixas e de deriva dispostas
+      ao longo da costa brasileira.</h6>
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-6 mt-2 align-items-center">	
+      <div class= "card-project text-align-center ">
+        <%= image_tag "boia_noronha.jpg"%>
+      </div>			
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-6 mt-2 align-items-center">	
+      <div class= "card-project text-align-center ">
+        <%= image_tag "boia_noronha.jpg"%>
+      </div>			
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-6 mt-2 align-items-center">
+      <h6>Desde a implementação do PNBOIA, já foram lançadas 26 boias de fundeio na costa brasileira e
+      Antártica, além de boias de deriva e outros sistemas autônomos de coleta de dados ambientais.
+      Além disso, em 2019, foi estabelecido o projeto “Consolidação para o Desenvolvimento da Boia
+      Meteoceanográfica Nacional” (REMObs), uma parceira entre CHM e Petrobras, com o objetivo de
+      consolidar o desenvolvimento de boias meteoceanográficas com tecnologia nacional, bem como de
+      complementar a rede de coleta de dados do Programa Nacional de Boias (PNBOIA) na obtenção de dados
+      ambientais.</h6>
+    </div>
+    <div class="col-sm-12 col-md-12 col-lg-12 mt-2 align-items-center">	
+      <h6>Ao longo dos mais de 22 anos de coleta efetiva de dados, o PNBOIA e o REMObs já realizaram o
+      lançamento de 22 boias de fundeio ao longo da costa brasileira e Antártica, além do lançamento de
+      boias de deriva e outros sistemas autônomos de coleta de dados ambientais.</h6>
+    </div>
+  </div>
+</div>
+
+<div class="image-strip text-center" id="fundo">
+  <div class="container reveal">
+    <div class="line"></div>
+  </div>
+</div>
+
+<div class="new-container" id="schedule">
+  <div class="wrapper">
+    <h1 class='text-center title text-align-center pt-2 pb-2'>PROGRAMAÇÃO</h1>
+    <div class="tabs">
+      <nav class="tabs__nav" role="tablist">
+        <button class="tabs__btn is-active" data-tab-target="tab-1" type="button" role="tab" aria-selected="true">Dia 1: 23NOV</button>
+        <button class="tabs__btn" data-tab-target="tab-2" type="button" role="tab" aria-selected="false">Dia 2: 24NOV</button>
+        <button class="tabs__btn" data-tab-target="tab-3" type="button" role="tab" aria-selected="false">Dia 3: 25NOV</button>
+      </nav>
+      <div class="tabs__content">
+        <div class="tabs__pane is-visible table-content" id="tab-1" role="tabpanel">
+          <h3 class='text-center title text-align-center pt-2 pb-2'>DIA 1: 23 DE NOVEMBRO</h3>
+          <ul class="list-timeline list-timeline-primary">
+            <li class="list-timeline-item p-0 pb-2 pb-lg-3 d-flex flex-wrap flex-column">
+              <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">09:00 - 09:30</span> - CREDENCIAMENTO</p>
+            </li>
+            <li class="list-timeline-item p-0 pb-2 pb-lg-3 d-flex flex-wrap flex-column">
+              <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">09:30 - 09:45</span> - Abertura - CMG Costa Junior (CHM)</p>
+            </li>
+            <li class="list-timeline-item p-0 pb-2 pb-lg-3 d-flex flex-wrap flex-column">
+              <h4><strong>SESSÃO 1: Programa Nacional de Boias e REMO Observacional</strong></h4>
+            </li>
+            <li class="list-timeline-item p-0 pb-2 pb-lg-3 d-flex flex-wrap flex-column">
+              <h4><strong>EM BREVE</strong></h4>
+            </li>
+            <li class="list-timeline-item p-0 pb-2 pb-lg-3 d-flex flex-wrap flex-column">
+              <p class="my-0 text-dark flex-fw text-sm text-uppercase"><strong><span class="text-inverse op-8">12:10-13:20</span> - ALMOÇO</strong></p>
+            </li>
+            <li class="list-timeline-item p-0 pb-2 pb-lg-3 d-flex flex-wrap flex-column">
+              <h4><strong>SESSÃO 2: Tecnologias em Sensores e Equipamentos</strong></h4>
+            </li>
+            <li class="list-timeline-item p-0 pb-2 pb-lg-3 d-flex flex-wrap flex-column">
+              <h4><strong>EM BREVE</strong></h4>
+            </li>
+            <li class="list-timeline-item p-0 pb-3 d-flex flex-wrap flex-column">
+              <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">16:00-17:00</span> - Discussão sobre as atividades do dia</p>
+            </li>
+          </ul>
+        </div>
+        <div class="tabs__pane" id="tab-2" role="tabpanel">
+          <h3 class='text-center title text-align-center pt-2 pb-2'>DIA 2: 24 DE NOVEMBRO</h3>
+          <ul class="list-timeline list-timeline-primary">
+            <li class="list-timeline-item p-0 pb-2 pb-lg-3 d-flex flex-wrap flex-column">
+              <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">09:00 - 09:10</span> - Abertura - (CHM) - </p>
+            </li>
+            <li class="list-timeline-item p-0 pb-2 pb-lg-3 d-flex flex-wrap flex-column">
+              <h4><strong>SESSÃO 3: Pesquisas em Modelagem Numérica</strong></h4>
+            </li>
+            <li class="list-timeline-item p-0 pb-2 pb-lg-3 d-flex flex-wrap flex-column">
+              <h4><strong>EM BREVE</strong></h4>
+            </li>
+            <li class="list-timeline-item p-0 pb-2 pb-lg-3 d-flex flex-wrap flex-column">
+              <p class="my-0 text-dark flex-fw text-sm text-uppercase"><strong><span class="text-inverse op-8">12:20-13:20</span> - ALMOÇO</strong></p>
+            </li>
+            <li class="list-timeline-item p-0 pb-2 pb-lg-3 d-flex flex-wrap flex-column">
+              <h4><strong>SESSÃO 4: Pesquisas em Oceanografia Física</strong></h4>
+            </li>
+            <li class="list-timeline-item p-0 pb-2 pb-lg-3 d-flex flex-wrap flex-column">
+              <h4><strong>EM BREVE</strong></h4>
+            </li>
+            <li class="list-timeline-item p-0 pb-3 d-flex flex-wrap flex-column">
+              <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">16:00-17:00</span> - Discussão sobre as atividades do dia</p>
+            </li>
+          </ul>
+        </div>
+        <div class="tabs__pane" id="tab-3" role="tabpanel">
+          <h3 class='text-center title text-align-center pt-2 pb-2'>DIA 3: 25 DE NOVEMBRO</h3>
+          <ul class="list-timeline list-timeline-primary">
+            <li class="list-timeline-item p-0 pb-2 pb-lg-3 d-flex flex-wrap flex-column">
+              <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">09:00 - 09:10</span> - Abertura - (CHM)</p>
+            </li>
+            <li class="list-timeline-item p-0 pb-2 pb-lg-3 d-flex flex-wrap flex-column">
+              <h4><strong>SESSÃO 5: Pesquisas em Oceanografia Geológica, Biológica e Química</strong></h4>
+            </li>
+            <li class="list-timeline-item p-0 pb-2 pb-lg-3 d-flex flex-wrap flex-column">
+              <h4><strong>EM BREVE</strong></h4>
+            </li>
+            <li class="list-timeline-item p-0 pb-2 pb-lg-3 d-flex flex-wrap flex-column">
+              <p class="my-0 text-dark flex-fw text-sm text-uppercase"><strong><span class="text-inverse op-8">12:20-13:20</span> - ALMOÇO</strong></p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

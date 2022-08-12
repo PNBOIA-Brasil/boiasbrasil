@@ -1,0 +1,40 @@
+.blue-button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 15px;
+	height: 50px;
+	width: 120px;
+	font-weight: bold;
+	background-color: #3FAEFD;
+	border-radius: 5px;
+	-webkit-transition: background-color 0.75s, color 0.75s;
+	transition: background-color 0.75s, color 0.75s;
+	&:hover {
+			background-color: #FEDC37;
+	}
+}
+.white-button {
+	align-items: center;
+	justify-content: center;
+	font-size: 15px;
+	height: 50px;
+	width: 120px;
+	border: 4px solid white;
+	font-weight: bold;
+	margin-right: 10px;
+	border-radius: 5px;
+	// text-shadow: 1px 0px 10px black;
+	&:hover {
+		background-color: white;
+		color: grey;
+		text-shadow: none;
+	}
+}
+.position{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: auto;
+	margin-bottom: auto;
+}
