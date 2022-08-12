@@ -10,6 +10,7 @@
     "bootstrap": "^5.2.0",
     "counterup": "^1.0.2",
     "counterup2": "^2.0.2",
+    "map-visit": "^1.0.0",
     "object-visit": "^1.0.1",
     "stimulus": "^3.1.0",
     "turbolinks": "^5.2.0",
