@@ -42,19 +42,15 @@
       <p>ENDEREÇO</p>
       <%= f.input :street, :label => "Rua",
                   required: true,
-                  autofocus: true,
                   input_html: { autocomplete: "rua" }%>
       <%= f.input :number, :label => "Número",
                   required: true,
-                  autofocus: true,
                   input_html: { autocomplete: "número" }%>
       <%= f.input :city, :label => "Cidade",
                   required: true,
-                  autofocus: true,
                   input_html: { autocomplete: "cidade" }%>
       <%= f.input :city, :label => "Estado",
                   required: true,
-                  autofocus: true,
                   input_html: { autocomplete: "estado" }%>
       <p>INFORMAÇÕES PESSOAIS</p>
       <%= f.input :user_type, :label => "Tipo de usuário",
