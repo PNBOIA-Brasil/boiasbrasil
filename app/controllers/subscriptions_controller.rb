@@ -10,7 +10,6 @@ class SubscriptionsController < ApplicationController
 
     def index
         @subscription = Subscription.where("email = ? and birthday = ?", params[:email], params[:birthday])
-        redirect_to subscription_path(@subscription) 
     end
 
     def create
