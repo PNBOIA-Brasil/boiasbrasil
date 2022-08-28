@@ -9,7 +9,19 @@ class SubscriptionsController < ApplicationController
     end
 
     def index
+        @message = ''
+        if params[:birthday] == ''
+            params[:birthday] = '01/01/0001'
+            @message += 'Campo(s) data de nascimento e/ou e-mail vazios ou inválidos. '
+        end
+        if params[:email] == ''
+            params[:email] = 'naoexiste@naoexiste.com'
+            if @message == ''
+                @message += 'Campo(s) data de nascimento e/ou e-mail vazios ou inválidos. '
+            end
+        end
         @subscription = Subscription.where("email = ? and birthday = ?", params[:email], params[:birthday])
+        @message
     end
 
     def create

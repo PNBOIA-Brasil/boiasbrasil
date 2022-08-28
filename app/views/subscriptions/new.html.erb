@@ -1,29 +1,31 @@
 <%= render 'shared/navbar2' %>
 
-<div class="new-container mt-5">
-  <h1 class='text-center title text-align-center pt-2 pb-2'>INSCRIÇÃO</h1>
+<div class="container mt-5">
+  <h1 class='text-center title text-align-center pt-4 pb-2'>INSCRIÇÃO</h1>
 
   <h2 class='text-center text-align-center pt-2 pb-2'>ACOMPANHE SUA INSCRIÇÃO</h2>
 	<%= form_tag subscriptions_path, method: :get, class: 'simple_form new_subscription w-100' do %>
     <div class="form-inputs row h-100 justify-content-between">
-			<div class="mt-0 mb-0 col-4">
-				<p class="mt-0 mb-0">NASCIMENTO: </p>
-        <%= date_field_tag(:birthday, "", class:"form-control date required subscription_birthday", placeholder: '' ) %>
+			<div class="mt-0 mb-0 col-sm-6 col-md-4">
+				<p class="mt-0 mb-0 text-center">NASCIMENTO: </p>
+        <%= date_field_tag(:birthday, "", class:"form-control date required subscription_birthday mb-1", placeholder: '' ) %>
 			</div>
-			<div class="mt-0 mb-0 col-4">
-				<p class="mt-0 mb-0">EMAIL: </p>
-				<%= text_field_tag(:email, "", class: "form-control string email required", placeholder: '' ) %>
+			<div class="mt-0 mb-0 col-sm-6 col-md-4 ">
+				<p class="mt-0 mb-0 text-center">EMAIL: </p>
+				<%= text_field_tag(:email, "", class: "form-control string email required mb-1", placeholder: '' ) %>
 			</div>
-			<%= submit_tag("PROCURAR", class: "blue-button h-100 col-4 position") %>
+			<div class="mt-0 mb-0 col-sm-12 col-md-4 w-100 mb-1">
+  			<%= submit_tag("PROCURAR", class: "blue-button position") %>
+  		</div>
 		</div>
 	<% end %>	
 
-  <h2 class='text-center text-align-center pt-2 pb-2'>NOVA INSCRIÇÃO</h2>
-  <h3 class='text-justify'>O 1° Boias-Brasil possui vagas limitadas para participação presencial. Dessa forma,
+  <h2 class='text-center text-align-center pt-5 pb-2'>NOVA INSCRIÇÃO</h2>
+  <p class='text-center'>O 1° Boias-Brasil possui vagas limitadas para participação presencial. Dessa forma,
   a sua inscrição passará por análise da comissão organizadora do evento para escolha dos
   participantes. Essa escolha será realizada até o dia <strong>10 de outubro de 2022</strong>.
   Para os participantes que não forem selecionados para participação presencial, será enviado
-  um link para assistir a transmissão do evento</h3>
+  um link para assistir a transmissão do evento.</p>
 
 
   <%= simple_form_for @subscription do |f| %>
@@ -60,17 +62,10 @@
                   required: true %>
       <p>EXPLIQUE SUA RELAÇÃO COM O PNBOIA</p>
       <%= f.input :observation, :label => "Porque gostaria de participar do evento? (*MAX 400 caracteres)",
-                  required: true %>
-      <p>ADICIONE AQUI LINKS IMPORTANTES (ARTIGOS, CURRÍCULO, ETC)</p>
-      <%= f.input :link1, :label => "Link1"
-                  %>
-      <%= f.input :link2, :label => "Link2"
-                  %>
-      <%= f.input :link3, :label => "Link3"
-                  %>
+                  required: true, class: "large-size" %>
     </div>
 
-    <div class="form-actions">
+    <div class="form-actions align-items-center">
       <%= f.button :submit, "Inscrever-se", class: "blue-button mt-5" %>
     </div>
   <% end %>

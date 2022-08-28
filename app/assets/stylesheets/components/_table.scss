@@ -160,3 +160,36 @@ p {
 		margin-top: 1rem;
 	}
 }
+
+
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+	.tabs__btn{
+		padding: 10px 10px ;
+	}
+	.tabs__pane{
+		h4 {
+		  font-size: 17px;
+		}
+		p{
+		  font-size: 15px;
+		}
+	}
+}
+  
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 768px) {
+	.tabs__btn{
+		padding: 10px 10px ;
+	}
+	.tabs__pane{
+		h4 {
+		  font-size: 20px;
+		}
+		p{
+		  font-size: 17px;
+		}
+	}
+}
+  

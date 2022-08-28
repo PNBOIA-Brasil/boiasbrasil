@@ -9,20 +9,16 @@
         <div class="front-page-content1 pb-5">
           <h1>1° BOIAS-BRASIL</h1>
           <p class='mt-1'>ENCONTRO CIENTÍFICO DO PROGRAMA NACIONAL DE BOIAS</p>
-          <p class='date-p mt-1'>23 a 25 de novembro de 2022 - Niterói-RJ</p>
+          <p class='date-p mt-1'>22 a 24 de novembro de 2022 - Niterói-RJ</p>
         </div>
       </div>
       <div class="col-sm-12 col-md-12 col-lg-12 text-center justify-content-between">
         <div class="row">
-          <div class="col-sm-6 col-md-6 col-lg-6 text-center ">
+          <div class="col-6 text-center ">
             <%= link_to "INSCREVA-SE", new_subscription_path, class:"white-button" %>
           </div>
-          <div class="col-sm-6 col-md-6 col-lg-6 text-center ">
-            <a href="#about">
-              <div class="blue-button">
-                SAIBA MAIS
-              </div>
-            </a>
+          <div class="col-6 text-center ">
+            <a href="#about" class="blue-button">SAIBA MAIS</a>
           </div>
         </div>
       </div>
@@ -36,15 +32,15 @@
   <div class="info-cont container">
     <div class="card-category">
       <h2 id="counter1">27</h2>
-      <h4 class="px-2">Boias lançadas</h4>
+      <h4 class="px-2 text-center">Boias lançadas</h4>
     </div>
     <div class="card-category">
-      <h2 id="counter2">97</h2>
-      <h4 class="px-2">Trabalhos publicados</h4>
+      <h2 id="counter2">123</h2>
+      <h4 class="px-2 text-center">Trabalhos publicados</h4>
     </div>
     <div class="card-category">
       <h2 id="counter3"><%= 15142 %></h2>
-      <h4 class="px-2">Dias de dados</h4>
+      <h4 class="px-2 text-center">Dias de dados</h4>
     </div>
   </div>
 </div>
@@ -59,10 +55,10 @@
       <p class='sobre pt-1'>O objetivo do evento é estimular interações entre cientistas e profissionais que atuem no
         monitoramento e modelagem costeira ao longo da costa brasileira, com ênfase na utilização de
         dados oriundos do PNBOIA.</p>
-      <p class='sobre pt-1'>O evento ocorrerá entre os dias 23 a 25 de novembro, na Diretoria de Hidrografia
+      <p class='sobre pt-1'>O evento ocorrerá entre os dias 22 a 24 de novembro, na Diretoria de Hidrografia
         e Navegação (DHN), na cidade de Niterói-RJ. Será um encontro híbrido, com possibilidade de
         participação presencial ou por modalidade remota.</p>
-      <p class='sobre pt-1'>No primeiro, serão apresentados a estrutura do PNBOIA, como
+      <p class='sobre pt-1'>No primeiro dia, serão apresentados a estrutura do PNBOIA, como
         funciona a sua coleta de dados e os principais sensores utilizados. No segundo e terceiro dias,
         pesquisadores e demais profissionais usuários dos dados do PNBOIA apresentarão suas pesquisas e
         os principais resultados obtidos.</p>
@@ -74,17 +70,17 @@
   <div class='bg-white pt-2 pb-2'>
     <h2 class='text-center text-align-center'>REALIZAÇÃO</h2>
     <div class='row justify-content-center'>
-      <div class="col-sm-3 col-md-3 col-lg-3 text-center align-items-center">
+      <div class="col-4 text-center align-items-center">
         <div class="icon-image mx-auto">
           <%= image_tag("logo_marinha.png") %>
         </div>
       </div>
-      <div class="col-sm-3 col-md-3 col-lg-3 text-center align-items-center">
+      <div class="col-4 text-center align-items-center">
         <div class="icon-image mx-auto">
           <%= image_tag("logo_chm.png") %>
         </div>
       </div>
-      <div class="col-sm-3 col-md-3 col-lg-3 text-center align-items-center">
+      <div class="col-4 text-center align-items-center">
         <div class="icon-image mx-auto">
           <%= image_tag("logo_pnboia.png") %>
         </div>
@@ -94,24 +90,29 @@
   <div class='bg-white mt-4 mb-4 pt-2 pb-2'>
     <h2 class='text-center text-align-center'>PATROCINADORES</h2>
     <div class='row justify-content-center'>
-      <div class="col-sm-3 col-md-3 col-lg-3 text-center align-items-center">
+      <div class="col-4 text-center align-items-center">
         <div class="icon-image mx-auto ">
           <%= image_tag("logo_nortek.png") %>
         </div>
       </div>    
-      <div class="col-sm-3 col-md-3 col-lg-3 text-center align-items-center">
+      <div class="col-4 text-center align-items-center">
         <div class="icon-image mx-auto ">
           <%= image_tag("logo_holos.png") %>
         </div>
       </div>    
-      <div class="col-sm-3 col-md-3 col-lg-3 text-center align-items-center">
+      <div class="col-4 text-center align-items-center">
         <div class="icon-image mx-auto ">
           <%= image_tag("logo_ussv.png") %>
         </div>
       </div>    
-      <div class="col-sm-3 col-md-3 col-lg-3 text-center align-items-center">
+      <div class="col-4 text-center align-items-center">
         <div class="icon-image mx-auto ">
           <%= image_tag("logo_hidromares.png") %>
+        </div>
+      </div>    
+      <div class="col-4 text-center align-items-center">
+        <div class="icon-image mx-auto ">
+          <%= image_tag("logo_messen.png") %>
         </div>
       </div>    
     </div>
@@ -155,32 +156,34 @@
       complementar a rede de coleta de dados do Programa Nacional de Boias (PNBOIA) na obtenção de dados
       ambientais.</h6>
     </div>
-    <div class="col-sm-12 col-md-12 col-lg-12 mt-2 align-items-center">	
-      <h6>Ao longo dos mais de 22 anos de coleta efetiva de dados, o PNBOIA e o REMObs já realizaram o
-      lançamento de 22 boias de fundeio ao longo da costa brasileira e Antártica, além do lançamento de
-      boias de deriva e outros sistemas autônomos de coleta de dados ambientais.</h6>
+  </div>
+</div>
+
+<div id="slider" class="slider mt-2">
+  <div class="slider-content">
+    <div class="slider-content-wrapper">
+      <div class="slider-content__item image-1"></div>
+      <div class="slider-content__item image-2"></div>
+      <div class="slider-content__item image-3"></div>
+      <div class="slider-content__item image-4"></div>
+      <div class="slider-content__item image-5"></div>
+      <div class="slider-content__item image-6"></div>
     </div>
   </div>
 </div>
 
-<div class="image-strip text-center" id="fundo">
-  <div class="container reveal">
-    <div class="line"></div>
-  </div>
-</div>
 
-<div class="new-container" id="schedule">
+<div class="container mb-5" id="schedule">
+  <h1 class='text-center title text-align-center pt-4 pb-2'>PROGRAMAÇÃO</h1>
   <div class="wrapper">
-    <h1 class='text-center title text-align-center pt-2 pb-2'>PROGRAMAÇÃO</h1>
     <div class="tabs">
       <nav class="tabs__nav" role="tablist">
-        <button class="tabs__btn is-active" data-tab-target="tab-1" type="button" role="tab" aria-selected="true">Dia 1: 23NOV</button>
-        <button class="tabs__btn" data-tab-target="tab-2" type="button" role="tab" aria-selected="false">Dia 2: 24NOV</button>
-        <button class="tabs__btn" data-tab-target="tab-3" type="button" role="tab" aria-selected="false">Dia 3: 25NOV</button>
+        <button class="tabs__btn is-active" data-tab-target="tab-1" type="button" role="tab" aria-selected="true">Dia 1: 22NOV</button>
+        <button class="tabs__btn" data-tab-target="tab-2" type="button" role="tab" aria-selected="false">Dia 2: 23NOV</button>
+        <button class="tabs__btn" data-tab-target="tab-3" type="button" role="tab" aria-selected="false">Dia 3: 24NOV</button>
       </nav>
       <div class="tabs__content">
         <div class="tabs__pane is-visible table-content" id="tab-1" role="tabpanel">
-          <h3 class='text-center title text-align-center pt-2 pb-2'>DIA 1: 23 DE NOVEMBRO</h3>
           <ul class="list-timeline list-timeline-primary">
             <li class="list-timeline-item p-0 pb-2 pb-lg-3 d-flex flex-wrap flex-column">
               <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">09:00 - 09:30</span> - CREDENCIAMENTO</p>
@@ -209,7 +212,6 @@
           </ul>
         </div>
         <div class="tabs__pane" id="tab-2" role="tabpanel">
-          <h3 class='text-center title text-align-center pt-2 pb-2'>DIA 2: 24 DE NOVEMBRO</h3>
           <ul class="list-timeline list-timeline-primary">
             <li class="list-timeline-item p-0 pb-2 pb-lg-3 d-flex flex-wrap flex-column">
               <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">09:00 - 09:10</span> - Abertura - (CHM) - </p>
@@ -235,7 +237,6 @@
           </ul>
         </div>
         <div class="tabs__pane" id="tab-3" role="tabpanel">
-          <h3 class='text-center title text-align-center pt-2 pb-2'>DIA 3: 25 DE NOVEMBRO</h3>
           <ul class="list-timeline list-timeline-primary">
             <li class="list-timeline-item p-0 pb-2 pb-lg-3 d-flex flex-wrap flex-column">
               <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">09:00 - 09:10</span> - Abertura - (CHM)</p>
@@ -250,6 +251,28 @@
               <p class="my-0 text-dark flex-fw text-sm text-uppercase"><strong><span class="text-inverse op-8">12:20-13:20</span> - ALMOÇO</strong></p>
             </li>
           </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class='nav-bg w-100 text-justify pb-4 pt-2' id="location">
+  <div class="container">
+    <h2 class='text-center title-footer text-align-center pt-2 pb-2'>CONTATO</h1>
+    <div class="row align-items-center">
+      <div class="col-sm-12 col-md-6 col-lg-6 mt-2 align-items-center text-center">
+        <h6 class='text-center'><strong>COMISSÃO ORGANIZADORA</strong></h6>
+        <h6><strong>Endereço:</strong></h6>
+        <h6>Rua Barão de Jaceguai, s/n° - Ponta da Armação - Niterói - Rio de Janeiro - Brasil</h6>
+        <h6><strong>Telefone:</strong></h6>
+        <h6>21 2189-3228</h6>
+        <h6><strong>Email:</strong></h6>
+        <h6>chm.pnboia@marinha.mil.br</h6>
+      </div>
+      <div class="col-sm-12 col-md-6 col-lg-6 mt-2 align-items-center">	
+        <div id="map" class='map'
+          data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
         </div>
       </div>
     </div>

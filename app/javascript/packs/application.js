@@ -25,6 +25,8 @@ import "bootstrap";
 import { countStations } from '../plugins/display_counter';
 import { initUpdateNavbarOnScroll } from '../plugins/navbar';
 import { initTabs } from '../plugins/init_tabs';
+import { initMapbox } from '../plugins/init_mapbox';
+import { initSlider } from '../plugins/init_slider';
 
 
 document.addEventListener('turbolinks:load', () => {
@@ -33,4 +35,6 @@ document.addEventListener('turbolinks:load', () => {
   countStations();
   initUpdateNavbarOnScroll();
   initTabs();
+  initMapbox();
+  initSlider();
 });

@@ -1,38 +1,40 @@
 <%= render 'shared/navbar2' %>
 
 <% if !@subscription.empty? %>
-    <div class="new-container mt-5" data-controller="flatpickr">
-        <h1 class='text-center title text-align-center pt-2 pb-2'>INSCRIÇÃO REALIZADA</h1>
+    <div class="container mt-5" data-controller="flatpickr">
+        <h1 class='text-center title text-align-center pt-4 pb-2'>INSCRIÇÃO REALIZADA</h1>
         <div class="form-inputs">
             <p class='text-center'><strong>STATUS DA INSCRIÇÃO:</strong></p>
-            <% if @subscription.situation == 'EM ANÁLISE' %>
-                <p class='text-center bg-info'><%= @subscription.situation %></p>
-            <% elsif @subscription.situation == 'APROVADO' %>
-                <p class='text-center bg-success'><%= @subscription.situation %></p>
-            <% elsif @subscription.situation == 'NÃO APROVADO' %>
-                <p class='text-center bg-danger'><%= @subscription.situation %></p>
+            <% if @subscription[0].situation == 'EM ANÁLISE' %>
+                <p class='text-center bg-info'><%= @subscription[0].situation %></p>
+            <% elsif @subscription[0].situation == 'APROVADO' %>
+                <p class='text-center bg-success'><%= @subscription[0].situation %></p>
+            <% elsif @subscription[0].situation == 'NÃO APROVADO' %>
+                <p class='text-center bg-danger'><%= @subscription[0].situation %></p>
             <% end %>
             <p class='text-center'><strong>NOME COMPLETO:</strong></p>
-            <p class='text-center'><%= @subscription.name %></p>
+            <p class='text-center'><%= @subscription[0].name %></p>
             <p class='text-center'><strong>EMAIL:</strong></p>
-            <p class='text-center'><%= @subscription.email %></p>
-            <p class='text-center'><strong>TIPO DE USUÁRIO:</strong></p>
-            <p class='text-center'><%= @subscription.user_type %></p>
+            <p class='text-center'><%= @subscription[0].email %></p>
+            <p class='text-center'><strong>OCUPAÇÃO:</strong></p>
+            <p class='text-center'><%= @subscription[0].user_type %></p>
             <p class='text-center'><strong>INSTITUIÇÃO:</strong></p>
-            <p class='text-center'><%= @subscription.institution %></p>
+            <p class='text-center'><%= @subscription[0].institution %></p>
             <p class='text-center'><strong>OBSERVAÇÃO:</strong></p>
-            <p class='text-center'><%= @subscription.observation %></p>
+            <p class='text-center'><%= @subscription[0].observation %></p>
             <%= link_to "INÍCIO", root_path, class: "text-center blue-button h-100 position p-2" %>
         </div>
     </div>
 <% else %>
-    <div class="new-container mt-5" data-controller="flatpickr">
-        <h1 class='text-center title text-align-center pt-2 pb-2'>INSCRIÇÃO NÃO ENCONTRADA</h1>
+    <div class="container mt-5" data-controller="flatpickr">
+        <h1 class='text-center title text-align-center pt-4 pb-2'>INSCRIÇÃO NÃO ENCONTRADA</h1>
+        <p class='text-align-center pt-2 pb-2'><%= @message %></p>
+
         <div class="row justify-content-center">
-          <div class="col-sm-3 col-md-3 col-lg-3 text-center ">
+          <div class="col-sm-3 col-md-3 col-lg-3 mb-2 text-center ">
             <%= link_to "INSCREVA-SE", new_subscription_path, class:"text-center blue-button h-100 position p-2" %>
           </div>
-          <div class="col-sm-3 col-md-3 col-lg-3 text-center ">
+          <div class="col-sm-3 col-md-3 col-lg-3 mb-2 text-center ">
             <%= link_to "INÍCIO", root_path, class: "text-center blue-button h-100 position p-2" %>
           </div>
         </div>
