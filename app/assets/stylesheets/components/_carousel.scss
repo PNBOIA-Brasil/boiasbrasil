@@ -17,9 +17,9 @@
   }
 
   p {
-    text-shadow: 2px 2px 0px white, -2px 1px 30px white;
+    text-shadow: 2px 2px 0px white, -1px 1px 30px white;
     font-weight: bold;
-    font-size: 20px;    
+    font-size: 24px;    
   }
 }
 
@@ -46,7 +46,7 @@ a {
 }
 
 .date-p {
-  font-size: 15px !important;
+  font-size: 20px !important;
 }
 
 .cont-white{
@@ -136,27 +136,27 @@ a {
 }
 
 .image-1 {
-  background-image: image-url('antartica1.jpg');
+  background-image: image-url('carrousel_1.jpg');
   opacity: 0.6;
 }
 .image-2 {
-  background-image: image-url('antartica1.jpg');
+  background-image: image-url('carrousel_2.png');
   opacity: 0.6;
 }
 .image-3 {
-  background-image: image-url('antartica1.jpg');
+  background-image: image-url('carrousel_3.jpg');
   opacity: 0.6;
 }
 .image-4 {
-  background-image: image-url('antartica1.jpg');
+  background-image: image-url('carrousel_4.png');
   opacity: 0.6;
 }
 .image-5 {
-  background-image: image-url('antartica1.jpg');
+  background-image: image-url('carrousel_5.jpg');
   opacity: 0.6;
 }
 .image-6 {
-  background-image: image-url('antartica1.jpg');
+  background-image: image-url('carrousel_6.png');
   opacity: 0.6;
 }
 
@@ -245,6 +245,12 @@ a {
   font-size: 30px; 
   color: #013b8b;
 }
+.tab-note{
+  display: block;
+}
+.tab-cell{
+  display: none;
+}
 
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
@@ -282,6 +288,12 @@ a {
   }
   ul{
     padding-left: 0px !important;
+  }
+  .tab-note{
+    display: none !important;
+  }
+  .tab-cell{
+    display: block !important;
   }
 }
 
